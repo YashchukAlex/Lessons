@@ -8,15 +8,20 @@
 
 import React from 'react';
 import { SafeAreaView, StatusBar, Platform, StyleSheet } from 'react-native';
+import Switch from './src/Switch';
+import Touchables from './src/Touchables';
+import FlaList from './src/FlaList';
 
 const App = () => {
   return Platform.OS === 'ios' ? (
     <SafeAreaView style={styles.topSpacingApp} forceInset={{ top: 'always' }}>
       <StatusBar hidden={false} barStyle={'dark-content'} />
-      {/* ios */}
+      {/* <Touchables /> */}
+      <FlaList />
+      {/* <Switch /> */}
     </SafeAreaView>
   ) : (
-    <>{/* android */}</>
+    <App />
   );
 };
 
