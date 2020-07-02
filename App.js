@@ -8,15 +8,16 @@
 
 import React from 'react';
 import { SafeAreaView, StatusBar, Platform, StyleSheet } from 'react-native';
+import NavigationContainer from './src/navigation';
 
 const App = () => {
   return Platform.OS === 'ios' ? (
     <SafeAreaView style={styles.topSpacingApp} forceInset={{ top: 'always' }}>
       <StatusBar hidden={false} barStyle={'dark-content'} />
-      {/* ios */}
+      <NavigationContainer />
     </SafeAreaView>
   ) : (
-    <>{/* android */}</>
+    <NavigationContainer />
   );
 };
 
